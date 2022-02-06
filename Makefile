@@ -3,7 +3,7 @@
 EXECABLE = monitor-exec
 
 CLANG = clang
-KERNEL_SRC_PATH = /mnt/c/Users/gaoxiang/Documents/GitHub/WSL2-Linux-Kernel-linux-msft-5.4.72
+KERNEL_SRC_PATH = /kernel-src
 
 BPFCODE = ./helloWorld/hello_kern
 LOADER = ./helloWorld/hello_user
@@ -15,8 +15,8 @@ BPFCFLAGS += -v -O2 -target bpf -c
 #### LOADER编译参数。
 # 好奇，bpf_load.c为什么不合并到
 
-LOADER_TOOLS_HEADER = -I$(KERNEL_SRC_PATH)/samples/bpf
-LOADER_TOOLS_SRC = $(KERNEL_SRC_PATH)/samples/bpf/bpf_load.c
+LOADER_TOOLS_HEADER = -I./common/loader/
+LOADER_TOOLS_SRC = ./common/loader/bpf_load.c
 
 # LIBRARY_INCLUDE += -I$(KERNEL_SRC_PATH)/samples/bpf
 LIBRARY_INCLUDE += -I$(KERNEL_SRC_PATH)/tools/lib
