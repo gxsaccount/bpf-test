@@ -13,7 +13,7 @@ $(uname -r)
 lsb_release -a
 
 header -> 头文件，.h的文件
-image　-> 编译好的内核
+image -> 编译好的内核
 source -> 所有Linux内核源码文件
 
 apt-get install linux-image-5.3.0-70-generic

@@ -8,10 +8,10 @@ static int (*bpf_trace_printk)(const char *fmt, int fmt_size,
 SEC("tracepoint/syscalls/sys_enter_execve")
 int bpf_prog(void *ctx) {
   char msg[] = "Hello, BPF World!";
-  bpf_trace_printk(msg, sizeof(msg));
+  bpf_trace_printk(msg, sizeof(msg));// 打印/sys/kernel/debug/tracing/trace_piped的消息
   return 0;
 }
 
-char _license[] SEC("license") = "GPL";
+char _license[] SEC("license") = "GPL"; //指定了该程序的许可证。由于Linux内核是根据GPL许可的，因此它也只能加载以GPL许可的程序。
 
 
