@@ -13,7 +13,6 @@ BPFINCLUDE += -I/usr/include/x86_64-linux-gnu
 BPFCFLAGS += -v -O2 -target bpf -c 
 
 #### LOADER编译参数。
-# 好奇，bpf_load.c为什么不合并到
 
 LOADER_TOOLS_HEADER = -I./common/loader/
 LOADER_TOOLS_SRC = ./common/loader/bpf_load.c
