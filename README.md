@@ -13,7 +13,7 @@ $(uname -r)
 lsb_release -a
 
 header -> 头文件，.h的文件
-image　-> 编译好的内核
+image -> 编译好的内核
 source -> 所有Linux内核源码文件
 
 apt-get install linux-image-5.3.0-70-generic
@@ -47,6 +47,7 @@ https://blog.csdn.net/sinat_38816924/article/details/115498707
 https://github.com/torvalds/linux/tree/master/samples/bpf  
 https://github.com/bpftools/linux-observability-with-bpf  
 https://github.com/learnre/Linux-Observability-with-BPF  
+https://github.com/nevermosby/linux-bpf-learning/tree/master/bpf
 
 https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.4.173.tar.xz  
 
