@@ -3,7 +3,7 @@
 EXECABLE = monitor-exec
 
 CLANG = clang
-KERNEL_SRC_PATH = /kernel-src
+KERNEL_SRC_PATH = /usr/src/linux-source-5.4.0
 
 BPFCODE = ./helloWorld/hello_kern
 LOADER = ./helloWorld/hello_user
@@ -27,8 +27,8 @@ LOADER_LDDIR += -L$(KERNEL_SRC_PATH)/tools/lib/bpf
 LOADER_LDLIBS += -lbpf -lelf
 
 LOADERCFLAGS += -v
-# LOADERCFLAGS += $(shell grep -q "define HAVE_ATTR_TEST 1" $(KERNEL_SRC_PATH)/tools/perf/perf-sys.h \
-#                   && echo "-DHAVE_ATTR_TEST=0")
+LOADERCFLAGS += $(shell grep -q "define HAVE_ATTR_TEST 1" $(KERNEL_SRC_PATH)/tools/perf/perf-sys.h \
+                  && echo "-DHAVE_ATTR_TEST=0")
 
 all:build bpfload
 

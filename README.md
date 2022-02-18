@@ -43,6 +43,19 @@ https://blog.csdn.net/sinat_38816924/article/details/115498707
 
 
 
+## 安装文件  
+sudo apt install build-essential git make libelf-dev clang strace tar bpfcc-tools linux-headers-$(uname -r) gcc-multilib
+
+
+## 编译  libbpf 
+
+cd /kernel-src/tools/lib/bpf
+sudo make && sudo make install prefix=/usr/local  
+
+## 编译自定义程序 
+make
+
+
 参考资料：  
 https://github.com/torvalds/linux/tree/master/samples/bpf  
 https://github.com/bpftools/linux-observability-with-bpf  
